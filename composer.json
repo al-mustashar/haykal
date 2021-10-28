@@ -1,0 +1,54 @@
+{
+    "name": "almustashar/haykal",
+    "description": "",
+    "keywords": [
+        "almustashar",
+        "haykal"
+    ],
+    "homepage": "https://github.com/al-mustashar/haykal",
+    "license": "MIT",
+    "type": "library",
+    "authors": [
+        {
+            "name": "Al-Mustashar",
+            "email": "almustashar.technology@gmail.com",
+            "role": "Developer"
+        }
+    ],
+    "require": {
+        "php": "^7.4|^8.0",
+        "illuminate/support": "^8.0"
+    },
+    "require-dev": {
+        "orchestra/testbench": "^6.0",
+        "phpunit/phpunit": "^9.0"
+    },
+    "autoload": {
+        "psr-4": {
+            "Almustashar\\Haykal\\": "src"
+        }
+    },
+    "autoload-dev": {
+        "psr-4": {
+            "Almustashar\\Haykal\\Tests\\": "tests"
+        }
+    },
+    "scripts": {
+        "test": "vendor/bin/phpunit",
+        "test-coverage": "vendor/bin/phpunit --coverage-html coverage"
+
+    },
+    "config": {
+        "sort-packages": true
+    },
+    "extra": {
+        "laravel": {
+            "providers": [
+                "Almustashar\\Haykal\\HaykalServiceProvider"
+            ],
+            "aliases": {
+                "Haykal": "Almustashar\\Haykal\\HaykalFacade"
+            }
+        }
+    }
+}
